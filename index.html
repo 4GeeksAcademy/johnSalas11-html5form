@@ -24,11 +24,11 @@
           <form class="row gx-5">
             <div class="col-md-5">
               <label for="validationDefaultCard" class="form-label">Card#</label>
-              <input type="number" class="form-control" id="validationDefaultCard" placeholder="XXXXXXXXXXXXXXXXXXXX" required>
+              <input type="text" class="form-control" id="validationDefaultCard" placeholder="XXXXXXXXXXXXXXXXXXXX" pattern="[0-9]{13,19}" title="Introduce un número de tarjeta válido (13 a 19 dígitos)" required>
             </div>
             <div class="col-md-3">
               <label for="validationDefaultCVC" class="form-label">CVC#</label>
-              <input type="number" class="form-control" id="validationDefaultCVC" placeholder="0000" required>
+              <input type="text" class="form-control" id="validationDefaultCVC" placeholder="0000" pattern="[0-9]{3,4}" title="Introduce un CVV válido (3 o 4 dígitos)" required>
             </div>
             <div class="col-md-4">
               <label for="validationDefaultAmnt" class="form-label">Amount</label>
@@ -60,7 +60,7 @@
             </div>
             <div class="col-md-3 mt-3">
               <label for="validationDefault05" class="form-label">Postal Code</label>
-              <input type="number" class="form-control" id="validationDefault05" required>
+              <input type="number" class="form-control" id="validationDefault05" pattern="[0-9]{4,10}" title="Introduce un código postal válido (4 a 10 dígitos)" required>
             </div>
             <div class="row pt-3 m-1">
               <div class="col-6">
@@ -68,22 +68,22 @@
                   <span>We accept:</span>
                 </div>
                 <div class="payments bg-secondary rounded" style="width: 40%;">
-                  <input type="radio" class="btn-check-secondary ms-3" id="circulo" name="btn-check" autocomplete="off">
+                  <input type="radio" class="btn-check-secondary ms-3" id="circulo" name="btn-check" autocomplete="off" required>
                   <label class="btn btn-secondary ps-0" for="btn-check">
                     <i class="fa-brands fa-cc-mastercard" style="font-size: large;"></i>
                   </label>
                   
-                  <input type="radio" class="btn-check-secondary ms-1" id="circulo" name="btn-check" autocomplete="off">
+                  <input type="radio" class="btn-check-secondary ms-1" id="circulo" name="btn-check" autocomplete="off" required>
                   <label class="btn btn-secondary  ps-0" for="btn-check">
                     <i class="fa-brands fa-cc-visa" style="font-size: large;"></i>
                   </label>
                   
-                  <input type="radio" class="btn-check-secondary ms-1" id="circulo" name="btn-check" autocomplete="off">
+                  <input type="radio" class="btn-check-secondary ms-1" id="circulo" name="btn-check" autocomplete="off" required>
                   <label class="btn btn-secondary ps-0" for="btn-check">
                     <i class="fa-brands fa-cc-diners-club" style="font-size: large;"></i>
                   </label>
     
-                  <input type="radio" class="btn-check-secondary ms-1" id="circulo" name="btn-check" autocomplete="off">
+                  <input type="radio" class="btn-check-secondary ms-1" id="circulo" name="btn-check" autocomplete="off" required>
                   <label class="btn btn-secondary ps-0" for="btn-check">
                     <i class="fa-brands fa-cc-discover" style="font-size: large;"></i>
                   </label>
@@ -92,7 +92,7 @@
             <div class="col-6 ps-4">
               <label for="floatingTextarea2" class="pb-2">Message</label>
               <div class="form-floating">
-                <textarea class="form-control"id="floatingTextarea2" style=" width: 100%; height: 100%"></textarea>
+                <textarea class="form-control"id="floatingTextarea2" style=" width: 100%; height: 100%" required></textarea>
                 <div>
                   <div style="font-size: small; color: gray;">
                     Add any notes here.
